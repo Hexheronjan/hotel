@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-kabut font-isi text-base text-kayu antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-judul tracking-rapat;
+    font-optical-sizing: auto;
+  }
+
+  /* Fokus keyboard yang jelas di semua tombol dan tautan */
+  :focus-visible {
+    outline: 3px solid theme("colors.kayu");
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Di latar gelap, fokus memakai warna kabut */
+  .gelap :focus-visible {
+    outline-color: theme("colors.kabut.DEFAULT");
+  }
+
+  ::selection {
+    background: theme("colors.emas");
+    color: theme("colors.kayu");
+  }
+}
+
+/* Hormati prefers-reduced-motion: matikan semua animasi dan transisi */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Kolom tanggal: ikon kalender bawaan browser mengikuti warna teks */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.7;
+}

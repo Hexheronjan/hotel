@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Foto">
+  <rect width="800" height="600" fill="#DCE6D9"/>
+  <g transform="translate(372 260)" fill="none" stroke="#4A5A4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 16h10l5-7h14l5 7h10a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V20a4 4 0 0 1 4-4z"/>
+    <circle cx="28" cy="33" r="9"/>
+  </g>
+  <text x="400" y="346" text-anchor="middle" font-family="Instrument Sans, Arial, sans-serif" font-size="26" fill="#4A5A4F">Foto</text>
+</svg>
